@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Snake Game</title>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                background-color: #f0f0f0;
+                background-image: url('background.jpg'); /* Add your background image */
+                background-size: cover;
+            }
+            #game {
+                border: 3px solid black;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a shadow to the canvas */
+            }
+            #score {
+                color: red;
+                position: absolute;
+                top: 0;
+                font-family: 'Courier New', Courier, monospace; /* Change the font */
+                font-size: 24px; /* Increase the font size */
+                text-shadow: 1px 1px 2px black; /* Add a shadow to the text */
+            }
+        </style>
+    </head>
+    <body>
+        <div id="score">Score: 0</div>
+        <canvas id="game" width="512" height="512"></canvas>
+        <script src="snake.js"></script>
+    </body>
+</html>
