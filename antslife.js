@@ -1,21 +1,22 @@
-// Using p5.js to modelize an ant colony with multiple ants
-// An ant is represented as a small rectangle
-// There are two types of ants: workers and a queen
-// The worker ants move randomly when they don't have food and move towards the queen when they have food
-// The worker ants wrap around the screen when they hit the border
-// The queen ant moves randomly and wraps around the screen when it hits the border
-// The worker ants are colored black and the queen ant is colored yellow
-// The worker ants collect food from randomly placed food sources and bring it back to the queen
-// When a worker ant brings food to the queen, a new worker ant is spawned near the queen
-// The queen ant lays eggs and the worker ants take care of the eggs
-// The ants' movements are animated randomly
-// The food sources are represented as green ellipses
-// The simulation starts with the current time
-// The number of food sources collected by the ants is tracked
-// The simulation is over when the last food source is collected and the last worker with food reaches the queen
-// At the end of the simulation, the canvas is hidden and a statistics is displayed in its place
-// The statistics include: time elapsed since the beginning of the simulation, number of food sources collected per minute
-// The simulation can be stopped manually by calling the endSimulation function
+/**
+ * Ants Life Simulation
+ * 
+ * This simulation models the life of ants in a colony. The simulation includes the following features:
+ * 
+ * - Ants: The simulation includes worker ants and a queen ant. Each ant has properties for its position, size, type, whether it has food, and its birth time.
+ * 
+ * - Movement: Worker ants move randomly. If a worker ant has food, it moves towards the queen.
+ * 
+ * - Lifespan: Each worker ant has a lifespan. When a worker ant's lifespan ends, it is removed from the simulation and a food source is created at its position.
+ * 
+ * - Food: Food sources are displayed as green circles. Worker ants can collect food from these sources and bring it back to the queen.
+ * 
+ * - End of Simulation: The simulation ends when all food sources are collected and all worker ants have brought their food to the queen.
+ * 
+ * - Real-time Statistics: The number of worker ants and food sources are displayed in real time under the canvas in the HTML section.
+ * 
+ * - Color Change: At the quarter of life of a worker ant, the worker ant is colored in orange.
+ */
 
 // The canvas width
 const CANVAS_WIDTH = 600;
